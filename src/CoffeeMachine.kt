@@ -9,7 +9,7 @@ object CoffeeMachine {
                 println("Estado Idle")
                 Thread.sleep(2000)
                 currentState = CoffeeMachineState.E2_SeleccionBebida
-                print("Selcionado vevida")
+                println("Seleccionando bebida...")
             }
             is CoffeeMachineState.E2_SeleccionBebida -> {
                 println("Estado E2")
