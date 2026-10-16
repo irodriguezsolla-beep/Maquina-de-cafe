@@ -1,3 +1,5 @@
+import com.ejemplo.coffeemachine.Bebida
+
 object CoffeeMachine {
     public var currentState: CoffeeMachineState = CoffeeMachineState.E1_Idle()
 
@@ -8,6 +10,7 @@ object CoffeeMachine {
             is CoffeeMachineState.E1_Idle -> {
                 println("Estado Idle")
                 Thread.sleep(2000)
+                bibida = Bebida(1,"Cafe")
                 currentState = CoffeeMachineState.E2_SeleccionBebida
                 println("Seleccionando bebida...")
             }
