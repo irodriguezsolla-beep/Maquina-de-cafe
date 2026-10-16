@@ -6,23 +6,23 @@ sealed class CoffeeMachineState {
     object E2_SeleccionBebida : CoffeeMachineState()
 
     // E3: Bebida no disponible
-    data class E3_BebidaNoDisponible(val bebidaId: Int) : CoffeeMachineState()
+    object E3_BebidaNoDisponible : CoffeeMachineState()
 
     // E4: Selección de azúcar (Sí / No)
-    data class E4_SeleccionAzucar(val bebidaId: Int) : CoffeeMachineState()
+    object E4_SeleccionAzucar : CoffeeMachineState()
 
     // E5: Preparación de café sin azúcar
-    data class E5_PreparacionSinAzucar(val bebidaId: Int) : CoffeeMachineState()
+    object E5_PreparacionSinAzucar : CoffeeMachineState()
 
     // E6: Selección de cantidad de azúcar (niveles 1 a 5)
-    data class E6_SeleccionCantidadAzucar(val bebidaId: Int) : CoffeeMachineState()
+    object E6_SeleccionCantidadAzucar : CoffeeMachineState()
 
     // E7: Azúcar no disponible
-    data class E7_AzucarNoDisponible(val bebidaId: Int) : CoffeeMachineState()
+    object  E7_AzucarNoDisponible: CoffeeMachineState()
 
     // E8: Preparación de café con azúcar
-    data class E8_PreparacionConAzucar(val bebidaId: Int, val nivelAzucar: Int) : CoffeeMachineState()
+    object  E8_PreparacionConAzucar : CoffeeMachineState()
 
     // E9: Recogida del café
-    data class E9_RecogidaCafe(val bebidaId: Int, val conAzucar: Boolean, val nivelAzucar: Int = 0) : CoffeeMachineState()
+    object  E9_RecogidaCafe : CoffeeMachineState()
 }
