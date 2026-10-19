@@ -1,14 +1,13 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    println("--- INICIANDO MÁQUINA DE CAFÉ ---")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    // El bucle se ejecuta mientras no hayamos llegado al estado final (Recogida)
+    while (CoffeeMachine.currentState !is CoffeeMachineState.E9_RecogidaCafe) {
+        CoffeeMachine.makeCoffee()
     }
+
+    // Una última llamada para procesar el mensaje final de E9
+    CoffeeMachine.makeCoffee()
+
+    println("\n--- PROCESO FINALIZADO ---")
 }
